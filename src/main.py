@@ -11,6 +11,7 @@ difficulty = "Easy"
 
 for i in range(5):
     q, ans = pg.generate(difficulty)
+
     print(f"\nQuestion {i+1} ({difficulty})")
     print(q)
 
@@ -23,6 +24,7 @@ for i in range(5):
 
     print("Correct!" if correct else f"Wrong! Answer: {ans}")
 
+    # Adjust difficulty after each question
     difficulty = engine.adjust(difficulty, tracker.accuracy())
 
 print("\nSession Finished")
